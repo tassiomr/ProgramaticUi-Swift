@@ -15,6 +15,7 @@ class LoginScreen: UIViewController {
 	let passwordTextField = StyledTextField();
 	
 	let backgroundImage = UIImageView();
+	let logo = UIImageView();
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -29,6 +30,7 @@ class LoginScreen: UIViewController {
 	
 	func setupProgrammaticUI() {
 		view.addSubview(backgroundImage);
+		view.addSubview(logo);
 		view.addSubview(textField);
 		view.addSubview(passwordTextField);
 		view.addSubview(button);
@@ -48,14 +50,18 @@ class LoginScreen: UIViewController {
 		backgroundImage.positionZeroToZero(view: view)
 		backgroundImage.image = UIImage(imageLiteralResourceName: "background-image.png");
 		backgroundImage.contentMode = .scaleAspectFill
+		backgroundImage.blurImage()
 		
+		logo.image = UIImage(imageLiteralResourceName: "app-logo.png");
+//		logo.contentMode =
+
+		
+		logo.square(view: view, yAnchor: -120);
 		textField.pin(view: view);
 		passwordTextField.pin(view: view, yAnchor: 66)
 		button.pin(view: view, yAnchor: 162)
 	}
 }
-
-
 
 extension LoginScreen : UITextFieldDelegate {
 	func setupDelegates() {
@@ -68,7 +74,6 @@ extension LoginScreen : UITextFieldDelegate {
 		return false
 	}
 }
-
 
 extension LoginScreen {
 	func dismissKey() {
