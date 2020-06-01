@@ -10,6 +10,8 @@
 		188EB5E324852FD30021D01A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188EB5E224852FD30021D01A /* UIViewExtension.swift */; };
 		188EB5E5248530930021D01A /* PaddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188EB5E4248530930021D01A /* PaddingView.swift */; };
 		188EB5E724853B9D0021D01A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188EB5E624853B9D0021D01A /* UIImageViewExtension.swift */; };
+		188EB5E924853E300021D01A /* StyledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188EB5E824853E300021D01A /* StyledImageView.swift */; };
+		188EB5EB2485407D0021D01A /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188EB5EA2485407D0021D01A /* StyledLabel.swift */; };
 		18A4826424847DE0002F6B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4826324847DE0002F6B25 /* AppDelegate.swift */; };
 		18A4826624847DE0002F6B25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4826524847DE0002F6B25 /* SceneDelegate.swift */; };
 		18A4826D24847DE2002F6B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A4826C24847DE2002F6B25 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		188EB5E224852FD30021D01A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		188EB5E4248530930021D01A /* PaddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingView.swift; sourceTree = "<group>"; };
 		188EB5E624853B9D0021D01A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		188EB5E824853E300021D01A /* StyledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledImageView.swift; sourceTree = "<group>"; };
+		188EB5EA2485407D0021D01A /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
 		18A4826024847DE0002F6B25 /* ProgramaticUi-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProgramaticUi-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A4826324847DE0002F6B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A4826524847DE0002F6B25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				18A4828024851DD4002F6B25 /* StyledButton.swift */,
 				18A4828224852043002F6B25 /* StyledTextField.swift */,
 				188EB5E4248530930021D01A /* PaddingView.swift */,
+				188EB5E824853E300021D01A /* StyledImageView.swift */,
+				188EB5EA2485407D0021D01A /* StyledLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 				18A4826424847DE0002F6B25 /* AppDelegate.swift in Sources */,
 				18A4827A24848458002F6B25 /* HomeScreen.swift in Sources */,
 				18A4826624847DE0002F6B25 /* SceneDelegate.swift in Sources */,
+				188EB5E924853E300021D01A /* StyledImageView.swift in Sources */,
+				188EB5EB2485407D0021D01A /* StyledLabel.swift in Sources */,
 				18A4827824847E92002F6B25 /* LoginScreen.swift in Sources */,
 				188EB5E324852FD30021D01A /* UIViewExtension.swift in Sources */,
 				188EB5E724853B9D0021D01A /* UIImageViewExtension.swift in Sources */,

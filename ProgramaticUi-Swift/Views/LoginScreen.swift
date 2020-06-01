@@ -44,19 +44,17 @@ class LoginScreen: UIViewController {
 	}
 	
 	func setupContrainst() {
-		button.setupButton(bgColor: .orange, target: self, action: #selector(goToSecondPage), title: "Next");
-		textField.setupTextField(placeholder: "Username");
-		passwordTextField.setupTextField(placeholder: "Password", isSecureTextEntry: true);
+		button.setup(bgColor: .orange, target: self, action: #selector(goToSecondPage), title: "Next");
+		textField.setup(placeholder: "Username");
+		passwordTextField.setup(placeholder: "Password", isSecureTextEntry: true);
 		backgroundImage.positionZeroToZero(view: view)
 		backgroundImage.image = UIImage(imageLiteralResourceName: "background-image.png");
 		backgroundImage.contentMode = .scaleAspectFill
 		backgroundImage.blurImage()
 		
 		logo.image = UIImage(imageLiteralResourceName: "app-logo.png");
-//		logo.contentMode =
-
-		
 		logo.square(view: view, yAnchor: -120);
+		
 		textField.pin(view: view);
 		passwordTextField.pin(view: view, yAnchor: 66)
 		button.pin(view: view, yAnchor: 162)
