@@ -9,26 +9,41 @@
 import UIKit
 
 class HomeScreen: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-				self.view.backgroundColor = .yellow;
-				navigationController?.setNavigationBarHidden(false, animated: false)
-        // Do any additional setup after loading the view.
-    }
-    
-
-	override func viewWillDisappear(_ animated: Bool) {
+	
+	let label = StyledLabel();
+	let button = StyledButton();
+	let profileImage = StyledImageView();
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.view.backgroundColor = .lightGray;
 		navigationController?.setNavigationBarHidden(true, animated: false)
+		
+		setupProgrammaticUI()
+		// Do any additional setup after loading the view.
 	}
-    /*
-    // MARK: - Navigation
+	
+	func setupProgrammaticUI() {
+		self.label.setup(text: "User logged: Tássio", textColor: .darkText);
+		self.button.setup(bgColor: .red, target: self, action: #selector(logout), title: "Logout")
+		self.profileImage.setup(image: UIImage(imageLiteralResourceName: "background-image.png"), contentMode: .center, isBlur: false)
+		
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+		self.view.addSubview(self.profileImage);
+		self.view.addSubview(self.label);
+		self.view.addSubview(button);
+		setupConstraint()
+	}
 
+	@objc func logout() {
+		
+	}
+	
+	func setupConstraint() {
+		self.label.pin(view: view);
+		self.button.pin(view: view, yAnchor: 45)
+		self.profileImage.square(view: view, size: 64, yAnchor: -((UIScreen.main.bounds.height / 2) - 64));
+		
+		self.profileImage.borderRadius(size: 64 / 2);
+	}
 }
