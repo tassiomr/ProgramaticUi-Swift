@@ -9,9 +9,18 @@
 import UIKit
 
 extension UIView {
-	func pin(view: UIView, constant: CGFloat = 20.0) {
+	func pin(view: UIView, yAnchor: CGFloat = 0, constant: CGFloat = 20.0) {
+		self.translatesAutoresizingMaskIntoConstraints = false;
 		self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: constant).isActive = true;
 		self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -constant).isActive = true;
-		self.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true;
+		self.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: yAnchor).isActive = true;
+	}
+	
+	func positionZeroToZero(view: UIView) {
+		self.translatesAutoresizingMaskIntoConstraints = false;
+		self.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true;
+		self.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true;
+		self.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true;
+		self.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true;
 	}
 }
