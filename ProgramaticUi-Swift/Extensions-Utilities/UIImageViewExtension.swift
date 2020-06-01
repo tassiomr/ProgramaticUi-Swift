@@ -9,12 +9,17 @@
 import UIKit
 
 extension UIImageView {
-	func blurImage() {
-		let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark);
+	func blurImage(style: UIBlurEffect.Style = .systemUltraThinMaterialDark) {
+		let blurEffect = UIBlurEffect(style: style);
 		let blurEffectView = UIVisualEffectView(effect: blurEffect)
 		blurEffectView.frame = self.bounds;
 		
 		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight];
 		self.addSubview(blurEffectView)
+	}
+	
+	func borderRadius(size: CGFloat) {
+		self.clipsToBounds = true;
+		self.layer.cornerRadius = size;
 	}
 }
