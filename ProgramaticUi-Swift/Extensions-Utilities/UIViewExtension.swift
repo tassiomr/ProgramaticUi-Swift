@@ -23,4 +23,12 @@ extension UIView {
 		self.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true;
 		self.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true;
 	}
+	
+	func square(view: UIView, size: CGFloat = 120, yAnchor: CGFloat = 0, xAnchor: CGFloat = 0) {
+		self.translatesAutoresizingMaskIntoConstraints = false;
+		self.widthAnchor.constraint(equalToConstant: size).isActive = true;
+		self.heightAnchor.constraint(equalToConstant: size).isActive = true;
+		self.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: yAnchor).isActive = true;
+		self.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: xAnchor).isActive = true;
+	}
 }
