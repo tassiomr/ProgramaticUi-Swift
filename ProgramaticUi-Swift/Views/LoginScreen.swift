@@ -14,7 +14,7 @@ class LoginScreen: UIViewController {
 	let textField = StyledTextField();
 	let passwordTextField = StyledTextField();
 	
-	let stackView = UIStackView();
+	let backgroundImage = UIImageView();
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,6 +25,7 @@ class LoginScreen: UIViewController {
 	}
 	
 	func setupProgrammaticUI() {
+		view.addSubview(backgroundImage);
 		view.addSubview(textField);
 		view.addSubview(passwordTextField);
 		view.addSubview(button);
@@ -41,6 +42,9 @@ class LoginScreen: UIViewController {
 		button.setupButton(bgColor: .orange, target: self, action: #selector(goToSecondPage), title: "Next");
 		textField.setupTextField(placeholder: "Username");
 		passwordTextField.setupTextField(placeholder: "Password", isSecureTextEntry: true);
+		backgroundImage.positionZeroToZero(view: view)
+		backgroundImage.image = UIImage(imageLiteralResourceName: "background-image.png");
+		backgroundImage.contentMode = .scaleAspectFill
 		
 		textField.pin(view: view);
 		passwordTextField.pin(view: view, yAnchor: 66)
