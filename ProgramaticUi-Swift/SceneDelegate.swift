@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	
 		guard let scene = (scene as? UIWindowScene) else { return }
 		
-		let firstScreen = FirstScreen()
+		let firstScreen = LoginScreen()
 		let navigationCOntroller = UINavigationController(rootViewController: firstScreen);
 		
 		
