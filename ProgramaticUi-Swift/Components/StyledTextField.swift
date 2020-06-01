@@ -24,7 +24,7 @@ class StyledTextField: UITextField {
 		super.init(coder: coder);
 	}
 	
-	func setupTextField(placeholder: String, isSecureTextEntry: Bool = false) {
+	func setup(placeholder: String, isSecureTextEntry: Bool = false) {
 		self.heightAnchor.constraint(equalToConstant: TextFiledContants.height).isActive = true;
 		self.clipsToBounds = true
 		self.backgroundColor = .white

@@ -23,7 +23,7 @@ class StyledButton: UIButton {
 		super.init(coder: coder)
 	}
 	
-	func setupButton (bgColor: UIColor, target: Any?, action: Selector, title: String) {
+	func setup(bgColor: UIColor, target: Any?, action: Selector, title: String) {
 		self.backgroundColor = bgColor
 		self.addTarget(target, action: action, for: .touchUpInside)
 		self.setTitle(title, for: .normal)
