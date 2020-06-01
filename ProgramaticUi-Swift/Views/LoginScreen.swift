@@ -19,6 +19,9 @@ class LoginScreen: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupProgrammaticUI()
+		self.setupDelegates()
+		self.dismissKey()
+		
 		self.view.backgroundColor = .white;
 		navigationController?.setNavigationBarHidden(true, animated: false)
 		// Do any additional setup after loading the view.
@@ -50,5 +53,32 @@ class LoginScreen: UIViewController {
 		passwordTextField.pin(view: view, yAnchor: 66)
 		button.pin(view: view, yAnchor: 162)
 	}
+}
 
+
+
+extension LoginScreen : UITextFieldDelegate {
+	func setupDelegates() {
+		textField.delegate = self;
+		passwordTextField.delegate = self;
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		self.dismissKeyboard();
+		return false
+	}
+}
+
+
+extension LoginScreen {
+	func dismissKey() {
+		let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+		
+		tap.cancelsTouchesInView = false
+		view.addGestureRecognizer(tap);
+	}
+	
+	@objc func dismissKeyboard() {
+		view.endEditing(true)
+	}
 }
